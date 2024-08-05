@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Frontend</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <!-- CSS Plugins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com/">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Crete+Round&amp;family=Work+Sans:wght@500;600&amp;display=swap"
+    rel="stylesheet">
+
+  <!-- tailwind css for color -->
+  <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/plugins/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/plugins/tabler-icons/tabler-icons.min.css">
+
+
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="assets/assets/css/styles.css">
+</head>
+
+<body class="light-mode">
+
+ <!-- Code for setting cookies on the webpage -->
+ <div id="cookies" style="display: none; background-color: white;" class="cookie-dark w-25 fixed-bottom shadow p-3 ms-3 mb-5 rounded" >
+
+  <img style="display: inline;" src="https://cdn-icons-png.flaticon.com/512/1047/1047711.png" alt="" width="70px">
+
+  <button id="closeCookie" style="margin-right: 3%;" class="position-absolute top-7 end-0"><img
+      src="https://www.capsitech.com/wp-content/themes/capsitech/assets/images/closeicon.webp" alt=""></button>
+
+  <div class="card-body mt-2">
+    <h5 class="card-title fw-bold mb-2">Cookies Consent</h5>
+    <p class="card-text">This site uses cookies. By continuing to browse the site you are agreeing to our use of
+      cookies. <a href="/privacy" class="text-red-500 hover:text-blue-500">To
+        find
+        out more click here</a>
+    </p>
+    <button type="button" id="cookies-btn" style="background-color: #ff4644;" class="mt-1 btn text-white fw-bold">I
+      Understand</button>
+
+  </div>
+</div>
+  <app-root></app-root>
+
+  <!-- JS Plugins -->
+  <script src="assets/plugins/jquery/jquery.min.js"></script>
+  <script src="assets/plugins/bootstrap/bootstrap.min.js"></script>
+  <script src="https://kit.fontawesome.com/13240490a1.js" crossorigin="anonymous"></script>
+  <!-- <script src="assets/plugins/lightense/lightense.min.js"></script> -->
+
+  <!-- Main Script -->
+  <script src="assets/assets/js/script.js"></script>
+
+  <!-- Creating A Cookies Using Dark Mode Toggle And Local Storage -->
+  <script>
+    let change = document.querySelector("#change-theme");
+    let body = document.querySelector("body");
+    let darkicon = document.querySelector(".dark-icon");
+    let cookieBox = document.querySelector("#cookies");
+
+    let acceptBtn = document.getElementById("cookies-btn");
+
+    // Check if cookies are accepted
+    let cookiesAccepted = localStorage.getItem("cookiesAccepted");
+
+    if (cookiesAccepted) {
+      cookieBox.style.display = "none";
+      // Check for theme preference in localStorage
+      const themePreference = localStorage.getItem("themePreference");
+      if (themePreference == "dark-mode") {
+        document.body.classList.add(themePreference);
+        darkicon.src = "../../../assets/assets/images/sun.png";
+        // document
+        // cookieBox.classList.add(themePreference);
+      } else {
+        document.body.classList.add(themePreference);
+        darkicon.src = "../../../assets/assets/images/moon.png";
+      }
+    } else {
+      cookieBox.style.display = "block";
+    }
+
+
+
+    change.addEventListener("click", () => {
+      if (body.getAttribute("class") == "light-mode") {
+
+        changeClass("light-mode", "dark-mode");
+        // document.querySelector('.loader').removeAttribute('id');
+        // document.querySelector('.loader').setAttribute('id',"preloader-dark");
+        localStorage.setItem("themePreference", "dark-mode");
+        darkicon.src = "../../../assets/assets/images/sun.png";
+
+      } else {
+
+        changeClass("dark-mode", "light-mode");
+        // document.querySelector('.loader').removeAttribute('id');
+        // document.querySelector('.loader').setAttribute('id',"preloader");
+        localStorage.setItem("themePreference", "light-mode");
+        darkicon.src = "../../../assets/assets/images/moon.png";
+      }
+    });
+
+
+
+    acceptBtn.addEventListener("click", function () {
+      localStorage.setItem("cookiesAccepted", "true");
+      cookieBox.style.display = "none";
+    });
+  </script>
+
+
+  <!-- Watson Chat Assistant -->
+  <script>
+    window.watsonAssistantChatOptions = {
+      integrationID: "f478282e-1237-4563-b680-4651843e7405", // The ID of this integration.
+      region: "au-syd", // The region your integration is hosted in.
+      serviceInstanceID: "ca3d05bc-a2cc-4bf0-baec-a635dfe7ff9c", // The ID of your service instance.
+      onLoad: async (instance) => { await instance.render(); }
+    };
+    setTimeout(function () {
+      const t = document.createElement('script');
+      t.src = "https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+      document.head.appendChild(t);
+    });
+  </script>
+
+</body>
+
+</html>

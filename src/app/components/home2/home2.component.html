@@ -1,0 +1,711 @@
+<!-- Code For CIT admission Counselling Form -->
+<div id="admissionModal" class="modal">
+    <div class="modal-dialog ">
+        <div class="modal-content form-dark">
+            <div class="modal-header bg-red-100 form-dark">
+                <img style="width: 35%;" src="../../../assets/assets/images/lsbu.png" alt="">
+                <div class="text-start px-3">
+                    <h1 class="modal-title fs-6 text-danger mb-3 fw-bold" id="staticBackdropLabel">Capsitech
+                        Institute of
+                        Technology</h1>
+                    <h1 class="fs-3 fw-semibold">Study with us and earn your Degree from LSBU</h1>
+                </div>
+                <button id="closeAdmission" type="button" class="position-absolute top-0 end-0 m-2 btn-close burger"
+                    data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="row text-start">
+                        <h6 class="text-danger fw-bold mb-4">Apply Now</h6>
+                        <!-- Display success and error messages -->
+                        <!-- <div id="successMessage" class="text-success fw-bolder" style="display: none;">
+                            Congratulations,
+                            Registration Completed!
+                        </div>
+                        <div id="errorMessage" class="text-warning fw-bolder" style="display: none;">
+                            <span>&#9888;</span> Error: Some Data Is
+                            Missing!
+                        </div> -->
+                        <div class="col-lg-12 ">
+                            <div class="form-group mb-3">
+                                <label for="username" class="form-label">Full Name <sup
+                                        class="text-danger">*</sup></label>
+                                <input  type="text" id="name" class=" form-control"
+                                    autocomplete="on">
+                            </div>
+                           
+                        </div>
+                        <div class="col-lg-12 ">
+                            <div class="form-group mb-3">
+                                <label for="username" class="form-label">Email<sup class="text-danger">*</sup></label>
+                                <input id="email" type="email" class=" form-control" name="email">
+                            </div>
+                            <!-- display email error -->
+                           
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="form-group mb-3">
+                                <label for="username" class="form-label">Phone Number<sup
+                                        class="text-danger">*</sup></label>
+                                <input  id="phone" type="tel" minlength="10" maxlength="10"
+                                    class="form-control" name="phone">
+                            </div>
+                            <!-- display phone number error -->
+                           
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="form-group mb-3">
+                                <label for="qualification" class="form-label">Qualification<sup
+                                        class="text-danger">*</sup></label>
+                                <input type="text" id="qualification"
+                                    class=" form-control " name="qualification">
+                            </div>
+                            <!-- display username error -->
+                            
+                        </div>
+                        <div class="col-12">
+                            <div class="mb-3 form-check checkBox">
+                                <input type="checkbox" class="form-check-input" id="checkbox">
+                                <label class="form-check-label" for="exampleCheck1">Request a Counselling
+                                    Session</label>
+                            </div>
+                            <!-- display check box error message -->
+                            <div class="error text-danger" id="checkboxError"></div>
+                        </div>
+                        <div class="col-12 mb-4">
+                            <div class="g-recaptcha" data-sitekey="6Lcp8xInAAAAAKRCAyV9e4Zdxhw3EqLMgr6irHDs"
+                                data-callback="verifyCaptcha">
+                            </div>
+                            <div id="g-recaptcha-error"></div>
+                        </div>
+                        <div class="col-12 text-start">
+
+                            <input type="submit" style="background-color: #ff4644;" name="submit"
+                                class="submitButton btn px-4 fw-bold py-2 fs-5 rounded text-white" value="Submit">
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<!--Form  Modal of CIT admission-->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content form-dark">
+            <div class="modal-header bg-red-100 form-dark">
+                <img style="width: 35%;" src="../../../assets/assets/images/lsbu.png" alt="">
+                <div class="text-start px-3">
+                    <h1 class="modal-title fs-4 text-danger mb-3" id="staticBackdropLabel">Capsitech
+                        Institute of
+                        Technology</h1>
+                    <h1 class="fs-1 fw-bold">Study with us and earn your Degree from LSBU</h1>
+                </div>
+                <button type="button" class="position-absolute top-0 end-0 m-2 btn-close" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form >
+                    <div class="row text-start">
+                        <h6 class="text-danger fw-bold mb-4">Apply Now</h6>
+                        <!-- Display success and error messages -->
+                        <!-- <div id="successMessage" class="text-success fw-bolder"
+                             style="display: none;">
+                             Congratulations,
+                             Registration Completed!
+                         </div>
+                         <div id="errorMessage" class="text-warning fw-bolder"
+                             style="display: none;">
+                             <span>&#9888;</span> Error: Some Data Is
+                             Missing!
+                         </div> -->
+                        <div class="col-lg-6 ">
+                            <div class="form-group mb-3">
+                                <label for="username" class="form-label">Full Name<sup
+                                        class="text-danger">*</sup></label>
+                                <input  type="text" id="name" class=" form-control"
+                                    autocomplete="on" name="name" required>
+                            </div>
+                       
+                        </div>
+                        <div class="col-lg-6 ">
+                            <div class="form-group mb-3">
+                                <label for="username" class="form-label">Email<sup class="text-danger">*</sup></label>
+                                <input  id="email" type="email" class=" form-control" name="email" pattern="^[a-z0-9]+@[a-z]+\.[a-z]{2,3}$">
+                            </div>
+                            <!-- display email error -->
+                            
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-group mb-3">
+                                <label for="username" class="form-label">Phone Number<sup
+                                        class="text-danger">*</sup></label>
+                                <input id="phone" type="tel" minlength="10" maxlength="10"
+                                    class="form-control" name="phone">
+                            </div>
+                            <!-- display phone number error -->
+                           
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-group mb-3">
+                                <label for="qualification" class="form-label">Qualification<sup
+                                        class="text-danger">*</sup></label>
+                                <input  type="text" id="qualification"
+                                    class=" form-control " name="qualification">
+                            </div>
+                            <!-- display username error -->
+                            <div class="error text-danger fw-bolder" id="qualMissing"></div>
+                        </div>
+                        <div class="col-12">
+                            <div class="mb-3 form-check checkBox">
+                                <input type="checkbox" class="form-check-input" id="checkbox">
+                                <label class="form-check-label" for="exampleCheck1">Request a
+                                    Counselling
+                                    Session</label>
+                            </div>
+                            <!-- display check box error message -->
+                           
+                        </div>
+                        <div class="col-12 mb-4">
+                            <div class="g-recaptcha" data-sitekey="6Lcp8xInAAAAAKRCAyV9e4Zdxhw3EqLMgr6irHDs"
+                                data-callback="verifyCaptcha">
+                            </div>
+                            <div id="g-recaptcha-error"></div>
+                        </div>
+                        <div class="col-12 text-start">
+                            <!-- <button class="btn px-4 fw-bold py-2 fs-5 rounded text-white" style="background-color: #ff4644;" type="button" name="submit" id="SubmitCITQueryBtn">Submit</button>
+                             <div id="errorMsg2" class="text-danger mt-2 small"></div> -->
+                            <input type="submit" style="background-color: #ff4644;" name="submit"
+                                class="submitButton btn px-4 fw-bold py-2 fs-5 rounded text-white" value="Submit">
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- Carousel effect using bootstrap -->
+<div class="container-fluid mt-3">
+    <!-- <div class="container"> -->
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="true">
+
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active"
+                style="background: url(../../../assets/assets/images/career-bg1.webp); background-repeat: no-repeat;  background-position: bottom; ">
+                <img src="../../../../../assets/assets/images/2.webp" class="d-block w-100" alt="...">
+                <div class="carousel-caption  text-start ">
+                    <h1 class="" style="font-size: 70px;">Capsitech Institute of Technology</h1>
+                    <div class="d-flex flex-wrap gap-1 text-start">
+                        <h4>Where innovation begins...</h4>
+                        <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                            class="custom-button1">Apply
+                            Now</button>
+                        <button type="button" class="custom-button2"><a class="text-decoration-none text-black"
+                                href="/cit">Know
+                                More</a></button>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="../../../../../assets/assets/images/4.webp" class="d-block w-100" alt="...">
+                <div class="carousel-caption  text-start">
+                    <h1 class="" style="font-size: 70px;">Graduation from London's Top University</h1>
+                    <div class="d-flex flex-wrap gap-1 text-start">
+                        <h4>Where innovation begins...</h4>
+                        <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                            class="custom-button1">Apply
+                            Now</button>
+                        <button type="button" class="custom-button2"><a class="text-decoration-none text-black"
+                                href="/cit">Know
+                                More</a></button>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="../../../../../assets/assets/images/3.webp" class="d-block w-100" alt="...">
+                <div class="carousel-caption  text-start">
+                    <h1 class="" style="font-size: 70px;">Study with us and earn your Degree from LSBU</h1>
+                    <div class="d-flex flex-wrap gap-1 text-start">
+                        <h4>Where innovation begins...</h4>
+                        <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                            class="custom-button1">Apply
+                            Now</button>
+                        <button type="button" class="custom-button2"><a class="text-decoration-none text-black"
+                                href="/cit">Know
+                                More</a></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- </div> -->
+</div>
+
+<!-- Unifying Technical Code Part -->
+<div class="mx-auto image-dark" style="background: url(../../../assets/assets/images/home-slide-bg.webp);  background-position: center;
+    background-repeat: no-repeat;
+    background-position: center;
+    justify-content: center; height: 750px;">
+
+    <div class="row container mx-auto pt-5 h-75 d-flex pb-0">
+        <div class=" col-xs-12 col-sm-5 col-lg-5 text-start pt-5">
+            <h1 class="fw-normal">We Are A Web Development Company Specialized In Creating <span
+                    class="fw-bolder auto-type text-danger"></span>For Audiences Worldwide.</h1>
+
+            <!-- <h1 class="fw-normal">Unifying Technical</h1>
+                <h1 class="fw-normal">Competence with</h1>
+                <h1 class="fw-bolder">Exemplary Business</h1>
+                <h1 class="fw-bolder">Mechanism</h1> -->
+
+        </div>
+        <div class="col-xs-12 col-sm-7 col-lg-6  text-start">
+            <img src="../../../assets/assets/images/slide1.webp" alt="" width="100%" height="80%">
+        </div>
+
+    </div>
+
+
+</div>
+
+<!-- Capsitech video using video tag -->
+<div class="container-fluid text-dark-mode2" style="margin-bottom: -10%; margin-top: 5%;">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-1"></div>
+            <div class=" col-xs-12 col-sm-3 text-start">
+                <div class="fs-2 fw-bolder ">Our Members</div>
+                <div class="fs-5" style="color: rgb(255, 0, 76);">Always Achieving The Goal </div>
+                <div class="fs-5 fw-normal">We work together as a family that is why we become global.</div>
+            </div>
+            <div class="col-xs-12 col-sm-8 mt-5" data-tilt>
+                <div class="border mx-auto" style="width: 54%; margin-top: -5%;">
+                    <video
+                        src="../../../assets/assets/images/Diwali Celebration 2022 at CAPSITECH ft. © LALSA CREATION - Downloaded from clipzag.com.mp4"
+                        type="video/mp4" width="100%" autoplay playinline muted loop></video>
+                </div>
+                <div class="position-relative w-75 mx-auto bottom-50" style="object-fit: fill;">
+                    <img src="../../../assets/assets/images/pngtree-tv-cartoon-clipart-png-image_5331408-removebg-preview.png" alt=""
+                        srcset="" width="100%">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Startup content html and framework code part  -->
+<div class="container-fluid ">
+    <div class="container">
+        <!-- <div class="col-1"></div> -->
+        <!-- <div class="col-1"></div> -->
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 text-start" data-tilt>
+                <!-- <div class="border mx-auto" > -->
+                <img src="../../../assets/assets/images/startups.webp" alt="" width="100%">
+                <!-- <video src="https://www.youtube.com/ee557a46-411b-4e49-8bf9-8691c2eb8971" type="video/mp4" width="100%" autoplay playinline muted loop></video> -->
+                <!-- <video tabindex="-1" class="video-stream html5-main-video" controlslist="nodownload" src="blob:https://www.youtube.com/ee557a46-411b-4e49-8bf9-8691c2eb8971" style="width: 635px; height: 360px; left: 0px; top: 0px;"></video> -->
+                <!-- <iframe src="https://www.youtube.com/ee557a46-411b-4e49-8bf9-8691c2eb8971" frameborder="0"></iframe> -->
+                <!-- </div> -->
+                <!-- <div class="position-relative w-75 mx-auto bottom-50" style="object-fit: fill;">
+                        <img src="../../../assets/assets/images/tv.png" alt="" srcset="" width="100%">
+
+                    </div> -->
+            </div>
+            <div class=" col-xs-12 col-sm-6 text-start text-black mb-5 pt-5">
+                <!-- <div class="fs-1 fw-bolder mt-5">Enjoy on your TV.</div>
+                    <div class="fs-4 fw-normal">Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray
+                        players
+                        and more.</div> -->
+                <div class="startup-content text-dark-mode2">
+                    <img src="../../../assets/assets/images/arrow-right.webp" alt="">
+                    <h1>Startups</h1>
+                    <h3 style="color: rgb(255, 0, 76);">Nurturing the Nascent Concepts</h3>
+                    <p>The incipience of big profitable endeavors begins from an idea and we, at Capsitech,
+                        encourage these
+                        budding ideas by providing the aspiring entrepreneurs a platform to work and develop
+                        flourishing
+                        business.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- <div style="position: relative;  overflow: hidden;" >
+                <img src="../../../assets/assets/images/tv.png" alt="" srcset="" width="80%">
+                
+            </div> -->
+    </div>
+</div>
+
+<!-- Functional Ventures content html and framework code part  -->
+<div class="container-fluid ">
+    <div class="container">
+        <!-- <div class="col-1"></div> -->
+        <!-- <div class="col-1"></div> -->
+        <div class="row">
+            <div class="col-xs-12 col-sm-6">
+
+
+                <div class="ventures-content " style="margin-top: 90%;">
+                    <div class="d-flex justify-between">
+                        <h1 class="text-dark-mode2">Functional Ventures</h1>
+                        <img src="../../../assets/assets/images/arrow-right.webp" alt="">
+                    </div>
+                    <h4 class="text-red-500">Fortifying the Existent</h4>
+                </div>
+
+
+                <!-- <div class="position-relative w-75 mx-auto bottom-50" style="object-fit: fill;">
+                        <img src="../../../assets/assets/images/tv.png" alt="" srcset="" width="100%">
+
+                    </div> -->
+            </div>
+            <div class=" col-xs-12 col-sm-6 text-start text-black ">
+                <!-- <div class="fs-1 fw-bolder mt-5">Enjoy on your TV.</div>
+                    <div class="fs-4 fw-normal">Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray
+                        players
+                        and more.</div> -->
+
+                <div data-tilt><img src="../../../assets/assets/images/functional-ventures.webp" alt="" width="100%"></div>
+                <div class="mt-5 fs-4 text-dark-mode2">Incorporation of innovation should never cease and to ensure
+                    incessant progress, we equip business with technologically-advanced solutions and digital
+                    alternatives to enhance the outreach.</div>
+
+            </div>
+
+        </div>
+
+        <!-- <div style="position: relative;  overflow: hidden;" >
+                <img src="../../../assets/assets/images/tv.png" alt="" srcset="" width="80%">
+                
+            </div> -->
+    </div>
+</div>
+
+<!-- Future prospects content html and framework code part  -->
+<div class="container-fluid pt-2">
+    <div class="container">
+        <!-- <div class="col-1"></div> -->
+        <!-- <div class="col-1"></div> -->
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 text-start" data-tilt>
+                <!-- <div class="border mx-auto" > -->
+                <img src="../../../assets/assets/images/future-prospect.webp" alt="" width="100%">
+                <!-- <video src="https://www.youtube.com/ee557a46-411b-4e49-8bf9-8691c2eb8971" type="video/mp4" width="100%" autoplay playinline muted loop></video> -->
+                <!-- <video tabindex="-1" class="video-stream html5-main-video" controlslist="nodownload" src="blob:https://www.youtube.com/ee557a46-411b-4e49-8bf9-8691c2eb8971" style="width: 635px; height: 360px; left: 0px; top: 0px;"></video> -->
+                <!-- <iframe src="https://www.youtube.com/ee557a46-411b-4e49-8bf9-8691c2eb8971" frameborder="0"></iframe> -->
+                <!-- </div> -->
+                <!-- <div class="position-relative w-75 mx-auto bottom-50" style="object-fit: fill;">
+                        <img src="../../../assets/assets/images/tv.png" alt="" srcset="" width="100%">
+
+                    </div> -->
+            </div>
+            <div class=" col-xs-12 col-sm-6 text-start text-black pt-5">
+                <!-- <div class="fs-1 fw-bolder mt-5">Enjoy on your TV.</div>
+                    <div class="fs-4 fw-normal">Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray
+                        players
+                        and more.</div> -->
+                <!-- <div class="future-content border"> -->
+                <h1 class="text-dark-mode2">Future Prospects</h1>
+                <h4 class="text-red-500">Anticipating the Business Needs</h4>
+                <div class="fs-5 mt-5 text-dark-mode2">We strive to assimilate the needs business may face in the
+                    future and we
+                    intend to
+                    develop and effectuate next-generation solutions that may potentially ensure smooth progression
+                    of
+                    the business trajectory. Our expertise lies is in comprehending the challenges that are faced by
+                    the
+                    businesses of varied domains and developing potential futuristic solutions.</div>
+                <div class="fs-5 mt-5 text-dark-mode2">Our aspirations of excelling as a one-stop solution to your
+                    business
+                    requirements are premised
+                    upon
+                    the idea of ensuring comprehensive growth and development of complementing businesses in
+                    different
+                    sectors.</div>
+                <!-- </div> -->
+            </div>
+
+        </div>
+
+        <!-- <div style="position: relative;  overflow: hidden;" >
+                <img src="../../../assets/assets/images/tv.png" alt="" srcset="" width="80%">
+                
+            </div> -->
+    </div>
+</div>
+
+<!-- Units of our prowess html and framework code part -->
+<div class="border-bottom border-dark bg-dark text-white border-5 container-fluid py-5">
+    <div class="container justify-center text-center">
+        <h1>Units of our Prowess</h1>
+        <div class="row py-5 ">
+            <div class="col-xs-12 col-sm-4">
+                <div class="icon1"></div>
+                <h3 class="fs-5">Effectual Brand Development</h3>
+            </div>
+            <div class="col-xs-12 col-sm-4 mt-4">
+                <div class="icon2"></div>
+                <h3 class="fs-5">Developing Accounting Solutions</h3>
+            </div>
+            <div class="col-xs-12 col-sm-4 mt-4">
+                <div class="icon3"></div>
+                <h3 class="fs-5">Impeccable Business Management</h3>
+            </div>
+        </div>
+        <div class="row py-5">
+            <div class="col-xs-12 col-sm-6">
+                <div class="icon4"></div>
+                <h3 class="fs-5">Mastery in Technology</h3>
+            </div>
+            <div class="col-xs-12 col-sm-6">
+                <div class="icon5"></div>
+                <h3 class="fs-5">Upskilling the Workforce</h3>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!--Services offered by the company html and framework code part-->
+<div class="container-fluid">
+    <div class="container p-5">
+        <!-- <div class="col-1"></div> -->
+        <!-- <div class="col-1"></div> -->
+        <div class="row py-5 text-dark-mode2">
+            <div class="col-xs-12 col-sm-4 text-start" data-tilt>
+
+                <div class="product-icon"></div>
+                <h3>Product Development</h3>
+                <div class="leading-loose">We excel in the creation of cloud-based technical solutions that are
+                    developed with strong
+                    research
+                    and efficacious implementation of the well-planned strategies that can befit the requirements of
+                    the
+                    clients and customers.</div>
+
+
+            </div>
+            <div class=" col-xs-12 col-sm-4 text-start " data-tilt>
+                <div class="talent-icon"></div>
+                <h3>Talent Outsourcing</h3>
+                <div class="leading-loose">We serve the suffering businesses by providing them sectional services to
+                    overcome the
+                    challenges
+                    and establish rewarding operational modules and augment the pace of seamless progression.</div>
+
+            </div>
+            <div class=" col-xs-12 col-sm-4 text-start" data-tilt>
+                <div class="training-icon"></div>
+                <h3>Training</h3>
+                <div class="leading-loose">We invite applications from aspiring professionals who are willing to
+                    enhance their practical
+                    knowledge and develop their career in the industry. Our training modules are designed to upskill
+                    the
+                    aspirants on the practical front.</div>
+
+            </div>
+
+        </div>
+
+        <!-- <div style="position: relative;  overflow: hidden;" >
+                <img src="../../../assets/assets/images/tv.png" alt="" srcset="" width="80%">
+                
+            </div> -->
+    </div>
+</div>
+
+<!-- Working Mechanism content using html and framework code part-->
+<div class="container-fluid image-dark" style="background: url(../../../assets/assets/images/home_bg3.webp) no-repeat center;">
+    <div class="container my-5">
+        <!-- <div class="col-1"></div> -->
+        <!-- <div class="col-1"></div> -->
+        <div class="row my-5 ">
+            <div class="col-xs-12 col-sm-5 my-5">
+                <h1 class=" fw-bold d-inline">Working Mechanism</h1>
+
+
+            </div>
+            <div class=" col-xs-12 col-sm-7 text-black my-5 fs-5 justify-between text-dark-mode2">
+
+                <p class="leading-loose">We have a number of successful organizations under our belt that are
+                    comprehensively
+                    designed and developed by our skilled team. Our working methodologies encompass the integration
+                    of
+                    sectional development and extensive planning. Our working protocols include but are not limited
+                    to
+                    the following stages of development:</p>
+                <table class="leading-loose justify-around">
+                    <tr class="border-bottom">
+                        <td>
+                            <div class="icon6"></div>
+                        </td>
+                        <td>Making proactive research to understand the market demands.</td>
+                    </tr>
+                    <tr class="border-bottom">
+                        <td>
+                            <div class="icon7"></div>
+                        </td>
+                        <td>Identifying the project's potential, loopholes, associated risks, and development
+                            modules.
+                        </td>
+                    </tr>
+                    <tr class="border-bottom">
+                        <td>
+                            <div class="icon8"></div>
+                        </td>
+                        <td>Consultations between the teams and finalizing the plan of execution.</td>
+                    </tr>
+                    <tr class="border-bottom">
+                        <td>
+                            <div class="icon9"></div>
+                        </td>
+                        <td>Allocating the responsibilities to the team members and assigning individual goals.</td>
+                    </tr>
+                    <tr class="border-bottom">
+                        <td>
+                            <div class="icon10"></div>
+                        </td>
+                        <td>Initiating the ideation process and working towards the Minimum Viable Product.</td>
+                    </tr>
+                    <tr class="border-bottom">
+                        <td>
+                            <div class="icon11"></div>
+                        </td>
+                        <td>Making relentless attempts to ensure the development of a successful business.</td>
+                    </tr>
+                </table>
+
+            </div>
+
+        </div>
+
+        <!-- <div style="position: relative;  overflow: hidden;" >
+                <img src="../../../assets/assets/images/tv.png" alt="" srcset="" width="80%">
+                
+            </div> -->
+    </div>
+</div>
+
+
+<!-- portfolio logo html and framework code part -->
+<div class="bg-slate-100 container-fluid">
+    <div class="container">
+        <h1 class="text-black text-center mt-5 text-dark-mode2">Portfolio</h1>
+        <div class="row my-5 mx-auto">
+            <div class="col-xs-12 col-sm-3 mb-2 portfolio-logo ">
+                <a class="" href="https://www.thecompanyformationuk.com/" target="" rel="noopener noreferrer"><img
+                        src="../../../assets/assets/images/tcf.webp" alt=""></a>
+            </div>
+            <div class="col-xs-12 col-sm-2 ms-5 mb-3 portfolio-logo">
+                <a href="https://www.debitam.com/" target="" rel="noopener noreferrer"><img
+                        src="../../../assets/assets/images/debitam.webp" alt=""></a>
+            </div>
+            <div class="col-xs-12 col-sm-2 ms-4 mb-3 portfolio-logo">
+                <a href="https://www.welbeckandbradwell.com/" target="" rel="noopener noreferrer"><img
+                        src="../../../assets/assets/images/wb.webp" alt=""></a>
+            </div>
+            <div class="col-xs-12 col-sm-2 ms-5 mb-3 portfolio-logo">
+                <a href="https://www.flipoke.com/" target="" rel="noopener noreferrer"><img
+                        src="../../../assets/assets/images/flipoke.webp" alt=""></a>
+            </div>
+            <div class="col-xs-12 col-sm-1 portfolio-logo">
+                <a href="https://gitaseva.org/" target="" rel="noopener noreferrer"><img
+                        src="../../../assets/assets/images/gitaseva.webp" alt=""></a>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- cards html and framework -->
+<div class="bg-slate-100 container-fluid image-dark"
+    style="background: linear-gradient(90deg, #fff 46%, #f9f9f9 46%); background-position: center;">
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 fs-1 fw-bold">Stay Updated, Stay Aware</div>
+            <div class="col-xs-12 col-sm-6 text-end mt-3"><a class="text-decoration-none text-black text-dark-mode"
+                    routerLink="/blogs" target="" rel="noopener noreferrer">View all blog</a></div>
+
+        </div>
+        <div class="row row-cols-1 row-cols-md-4 g-4">
+            <div class="col my-4">
+                <div class="card h-100 mt-4">
+                    <img src="../../../assets/assets/images/significance-of-effective-communication.jpg" class="card-img-top"
+                        alt="...">
+                    <div class="bg-secondary-subtle rounded w-25 p-1 position-relative" style="top: -5%; left: 10%;">
+                        General</div>
+                    <div class="card-body">
+                        <h5 class="card-title"><a class="hover-effect text-decoration-none text-black"
+                                routerLink="/blogs" target="" rel="noopener noreferrer">Significance of
+                                effective
+                                communication</a></h5>
+                        <p class="card-text mt-5"><a class="hover-effect text-decoration-none text-black"
+                                routerLink="/blogs" target="" rel="noopener noreferrer">Read more</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col my-5">
+                <div class="card h-100">
+                    <img src="../../../assets/assets/images/quick-tips-for-a-great-interview.jpg" class="card-img-top" alt="...">
+                    <div class="bg-secondary-subtle rounded w-25 p-1 position-relative" style="top: -5%; left: 10%;">
+                        General</div>
+                    <div class="card-body">
+                        <h5 class="card-title"><a class="hover-effect text-decoration-none text-black"
+                                routerLink="/blogs" target="" rel="noopener noreferrer">5 Quick
+                                Tips for a Great
+                                Interview</a></h5>
+                        <p class="card-text mt-4"><a class="hover-effect text-decoration-none text-black"
+                                routerLink="/blogs" target="" rel="noopener noreferrer">Read
+                                more</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col my-5">
+                <div class="card h-100">
+                    <img src="../../../assets/assets/images/coronavirus-risks-opportunities.jpg" class="card-img-top" alt="...">
+                    <div class="bg-secondary-subtle rounded w-25 p-1 position-relative" style="top: -5%; left: 10%;">
+                        General</div>
+                    <div class="card-body ">
+                        <h5 class="card-title"><a class="hover-effect text-decoration-none text-black"
+                                routerLink="/blogs" target="" rel="noopener noreferrer">Coronavirus: Risks vs.
+                                Opportunities</a></h5>
+                        <p class="card-text mt-4"><a class="hover-effect text-decoration-none text-black"
+                                routerLink="/blogs" target="" rel="noopener noreferrer">Read more</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col my-5">
+                <div class="card h-100">
+                    <img src="../../../assets/assets/images/Career-Options-for-an-IT-Professional.jpg" class="card-img-top"
+                        alt="...">
+                    <div class="bg-secondary-subtle rounded w-25 p-1 position-relative" style="top: -5%; left: 10%;">
+                        General</div>
+                    <div class="card-body">
+                        <h5 class="card-title"><a class="hover-effect text-decoration-none text-black"
+                                routerLink="/blogs" target="" rel="noopener noreferrer">Career Options for an
+                                IT
+                                Professional</a></h5>
+                        <p class="card-text mt-4"><a class="hover-effect text-decoration-none text-black"
+                                routerLink="/blogs" target="" rel="noopener noreferrer">Read more</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

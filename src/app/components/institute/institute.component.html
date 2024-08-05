@@ -1,0 +1,301 @@
+<!-- Click for Inquire Code Part -->
+
+<div class="container-fluid py-5" style="background: url(../../../assets/assets/images/banner.jpg);  background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+justify-content: center;">
+   <div class="container mx-auto justify-center">
+       <div class="w-75 mx-auto text-center pt-5">
+           <div class="fw-bolder mb-5 text-white" style="font-size: 60px;">Your First Step towards Success</div>
+           <button type="button" class="btn px-5 border-3 fs-4 rounded-pill text-white btn-outline-danger"
+               data-bs-toggle="modal" data-bs-target="#exampleModal">Click To
+               Inquire</button>
+           <!--Form  Modal -->
+           <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+               aria-hidden="true">
+               <div class="modal-dialog modal-lg">
+                   <div class="modal-content form-dark">
+                       <div class="modal-header bg-red-100 form-dark">
+                           <img style="width: 35%;" src="../../../assets/assets/images/lsbu.png" alt="">
+                           <div class="text-start px-3">
+                               <h1 class="modal-title fs-4 text-danger mb-3" id="staticBackdropLabel">Capsitech
+                                   Institute of
+                                   Technology</h1>
+                               <h1 class="fs-1 fw-bold">Study with us and earn your Degree from LSBU</h1>
+                           </div>
+                           <button type="button" class="position-absolute top-0 end-0 m-2 btn-close"
+                               data-bs-dismiss="modal" aria-label="Close"></button>
+                       </div>
+                       <div class="modal-body">
+                           <form onsubmit="return submitUserForm();" action="" method="POST">
+                               <div class="row text-start">
+                                   <h6 class="text-danger fw-bold mb-4">Apply Now</h6>
+                                       <!-- Display success and error messages -->
+                                       <!-- <div id="successMessage" class="text-success fw-bolder"
+                                           style="display: none;">
+                                           Congratulations,
+                                           Registration Completed!
+                                       </div>
+                                       <div id="errorMessage" class="text-warning fw-bolder"
+                                           style="display: none;">
+                                           <span>&#9888;</span> Error: Some Data Is
+                                           Missing!
+                                       </div> -->
+                                       <div class="col-lg-6 ">
+                                           <div class="form-group mb-3">
+                                               <label for="username" class="form-label">Full Name<sup
+                                                       class="text-danger">*</sup></label>
+                                               <input type="text" id="name" class=" form-control"
+                                                    autocomplete="on" name="name">
+                                           </div>
+                                           <div class="error text-danger fw-bolder" id="nameMissing"></div>
+                                       </div>
+                                       <div class="col-lg-6 ">
+                                           <div class="form-group mb-3">
+                                               <label for="username" class="form-label">Email<sup
+                                                       class="text-danger">*</sup></label>
+                                               <input id="email" type="email" class=" form-control"
+                                                  name="email" >
+                                           </div>
+                                           <!-- display email error -->
+                                           <div class="error text-danger fw-bolder" id="emailMissing"></div>
+                                           <div class="error text-danger fw-bolder" id="emailError"></div>
+                                       </div>
+                                       <div class="col-lg-6">
+                                           <div class="form-group mb-3">
+                                               <label for="username" class="form-label">Phone Number<sup
+                                                       class="text-danger">*</sup></label>
+                                               <input id="phone" type="tel" minlength="10" maxlength="10"
+                                                   class="form-control" name="phone">
+                                           </div>
+                                           <!-- display phone number error -->
+                                           <div class="error text-danger fw-bolder" id="phoneMissing"></div>
+                                           <div class="error text-danger fw-bolder" id="phoneError"></div>
+                                       </div>
+                                       <div class="col-lg-6">
+                                           <div class="form-group mb-3">
+                                               <label for="qualification" class="form-label">Qualification<sup
+                                                       class="text-danger">*</sup></label>
+                                               <input type="text" id="qualification" class=" form-control "
+                                                  name="qualification">
+                                           </div>
+                                           <!-- display username error -->
+                                           <div class="error text-danger fw-bolder" id="qualMissing"></div>
+                                       </div>
+                                       <div class="col-12">
+                                           <div class="mb-3 form-check checkBox">
+                                               <input type="checkbox" class="form-check-input" id="checkbox">
+                                               <label class="form-check-label" for="exampleCheck1">Request a
+                                                   Counselling
+                                                   Session</label>
+                                           </div>
+                                           <!-- display check box error message -->
+                                           <div class="error text-danger" id="checkboxError"></div>
+                                       </div>
+                                       <div class="col-12 mb-4">
+                                           <div class="g-recaptcha"
+                                               data-sitekey="6Lcp8xInAAAAAKRCAyV9e4Zdxhw3EqLMgr6irHDs"
+                                               data-callback="verifyCaptcha">
+                                           </div>
+                                           <div id="g-recaptcha-error"></div>
+                                       </div>
+                                       <div class="col-12 text-start">
+                                           <!-- <button class="btn px-4 fw-bold py-2 fs-5 rounded text-white" style="background-color: #ff4644;" type="button" name="submit" id="SubmitCITQueryBtn">Submit</button>
+                                           <div id="errorMsg2" class="text-danger mt-2 small"></div> -->
+                                           <input type="submit" style="background-color: #ff4644;" name="submit"
+                                               class="submitButton btn px-4 fw-bold py-2 fs-5 rounded text-white"
+                                               value="Submit">
+                                       </div>
+                               </div>
+                           </form>
+                       </div>
+
+                   </div>
+               </div>
+           </div>
+       </div>
+   </div>
+</div>
+
+<!-- Our Campus Content Code Part -->
+<div class="container-fluid">
+   <div class="container text-center">
+       <div class="w-75 mx-auto text-dark-mode2">
+           <div class="fw-bold mt-5" style="font-size: 50px;">Study at Capsitech Institute
+               of Technology (CIT)</div>
+           <div class="fs-4 text-danger fw-semibold my-3">Our Campus</div>
+           <p class="fs-6">We welcome you to come see our state of the art campus built to serve the training
+               requirements in mind.
+               Our premises facilitate learning and practical training of our candidates.</p>
+       </div>
+   </div>
+
+   <div class="container my-5">
+       <div class="row">
+           <div class="col-sm-6 mb-3 mb-sm-0">
+               <div class="card">
+                   <div class="card-body image-dark">
+                       <img class="p-3 mb-2" src="../../../assets/assets/images/cit-admission.jpg" alt="">
+                       <p class="card-text mb-4 fs-5">A premier institution offering career oriented learning
+                           opportunities.
+                       </p>
+                       <a href="https://www.capsitech.com/wp-content/themes/capsitech/cit/cit-brochure.pdf" target="_blank">
+                       <button type="button" class="mt-5 btn border-3 fs-5 btn-outline-danger">Download
+                           Prospectus</button></a>
+                   </div>
+               </div>
+           </div>
+           <div class="col-sm-6">
+               <div class="card">
+                   <div class="card-body image-dark">
+                       <img class="p-3 mb-2" src="../../../assets/assets/images/cit-admission2.jpg" alt="">
+                       <h5 class="card-title">Admission</h5>
+                       <p class="card-text fs-5">Admissions are subjected to availability. Interested in making
+                           your
+                           career in technical domain, reach out to our counseling team. Today!</p>
+                       <button type="button" class="btn border-3 fs-5 btn-outline-danger" data-bs-toggle="modal"
+                           data-bs-target="#exampleModal">Click To
+                           Inquire</button>
+                   </div>
+               </div>
+           </div>
+       </div>
+   </div>
+
+
+   <div class="container text-dark-mode2">
+       <div class="row border mx-auto" style="width: 85%;">
+           <div class="col-xs-12 col-sm-12 col-md-5"><img src="../../../assets/assets/images/lsbu.png" alt=""></div>
+           <div class="col-xs-12 col-sm-12 col-md-6 mt-3">
+               <div class="fs-4 text-danger fw-semibold">Earn International Degree</div>
+               <div class="fw-bold" style="font-size: 50px;">Study with us
+                   and earn your Degree
+                   from LSBU</div>
+           </div>
+       </div>
+       <div class="row mx-auto px-4 py-5 my-5 bg-body-tertiary image-dark">
+           <div class="col-xs-12 col-sm-12 col-md-10">
+               <h3 class="fw-semibold">Learn as you Earn</h3>
+               <h5 class="fw-normal">After successful completion of your course, you can earn a CTC of 12 lacs+
+               </h5>
+           </div>
+           <div class="col-xs-12 col-sm-12 col-md-2">
+               <a class="icon-link icon-link-hover text-decoration-none text-danger mt-4 fw-bolder" href="#">
+                   View Prospectus
+                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                       class="bi bi-arrow-right" viewBox="0 0 16 16">
+                       <path fill-rule="evenodd"
+                           d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+                   </svg>
+               </a>
+           </div>
+       </div>
+   </div>
+
+</div>
+
+<!-- Benefits Of Studying CIT Code Part -->
+<div class="container-fluid">
+   <div class="container text-center text-dark-mode2">
+       <h2>Benefits of studying with CIT</h2>
+       <div class="row mt-5">
+           <div class="col-xs-12 col-sm-12 col-md-3 border-end">
+               <img class="mx-auto" src="../../../assets/assets/images/benifit1.svg" alt="">
+               <h3 class="my-4">B.Sc. from LSBU</h3>
+               <div class="border w-25 mx-auto mb-3"></div>
+               <h5 class="lh-lg fw-normal">Earn a B.Sc. degree from London South Bank University</h5>
+           </div>
+           <div class="col-xs-12 col-sm-12 col-md-3 border-end">
+               <img class="mx-auto" src="../../../assets/assets/images/benifit2.svg" alt="">
+               <h3 class="my-4">Assured Placement</h3>
+               <div class="border w-25 mx-auto mb-3"></div>
+               <h5 class="lh-lg fw-normal">Guaranteed job at Capsitech after successful graduation</h5>
+           </div>
+           <div class="col-xs-12 col-sm-12 col-md-3 border-end">
+               <img class="mx-auto" src="../../../assets/assets/images/benifit3.svg" alt="">
+               <h3 class="my-4">Earn as you Learn</h3>
+               <div class="border w-25 mx-auto mb-3"></div>
+               <h5 class="lh-lg fw-normal">Stipends provided after 1st year of admission</h5>
+           </div>
+           <div class="col-xs-12 col-sm-12 col-md-3 ">
+               <img class="mx-auto" src="../../../assets/assets/images/benifit4.svg" alt="">
+               <h3 class="my-4">Practical Learning</h3>
+               <div class="border w-25 mx-auto mb-3"></div>
+               <h5 class="lh-lg fw-normal">Dedicated trainers for practical learning</h5>
+           </div>
+
+       </div>
+   </div>
+
+   <!-- Life on Campus -->
+   <div class="container text-center text-dark-mode2">
+       <h2>Life on Campus</h2>
+       <div class="row py-3 px-3 rounded bg-body-tertiary">
+           <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 py-3 bg-body-tertiary mb-3 mb-sm-0">
+               <div class="card p-4 pb-4">
+                   <div class="card-body image-dark">
+                       <h5 class="card-title text-danger">Academic Excellence</h5>
+                       <p class="card-text lh-lg fw-normal">Find out what student life
+                           is really like.</p>
+
+                   </div>
+               </div>
+           </div>
+           <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 py-3 bg-body-tertiary mb-3 mb-sm-0">
+               <div class="card p-4">
+                   <div class="card-body image-dark">
+                       <h5 class="card-title text-danger">State-of-the-Art Facilities</h5>
+                       <p class="card-text lh-lg fw-normal">We aim to cater to your
+                           individual needs.</p>
+
+                   </div>
+               </div>
+           </div>
+           <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 py-3 bg-body-tertiary mb-3 mb-sm-0">
+               <div class="card p-4">
+                   <div class="card-body image-dark">
+                       <h5 class="card-title text-danger">Holistic Development</h5>
+                       <p class="card-text lh-lg fw-normal">A range of halls and houses to suit your needs.</p>
+
+                   </div>
+               </div>
+           </div>
+
+       </div>
+
+   </div>
+
+
+   <!-- Visit us contact code part -->
+   <div class="container text-center text-dark-mode2">
+
+       <div class="row my-5">
+           <div class="col-xs-12 col-sm-12 col-md-3">
+               <img class="mx-auto" src="../../../assets/assets/images/visit-us.svg" alt="">
+               <h3 class="my-4">Visit us</h3>
+
+               <h5 class="lh-lg fw-normal">Book an open day</h5>
+           </div>
+           <div class="col-xs-12 col-sm-12 col-md-3">
+               <img class="mx-auto" src="../../../assets/assets/images/prospectus.svg" alt="">
+               <h3 class="my-4">Prospectus</h3>
+
+               <h5 class="lh-lg fw-normal">View, Download or Order</h5>
+           </div>
+           <div class="col-xs-12 col-sm-12 col-md-3 ">
+               <img class="mx-auto" src="../../../assets/assets/images/live-chat.svg" alt="">
+               <h3 class="my-4">Live Chat</h3>
+
+               <h5 class="lh-lg fw-normal">Chat with addmission</h5>
+           </div>
+           <div class="col-xs-12 col-sm-12 col-md-3 ">
+               <img class="mx-auto" src="../../../assets/assets/images/call.svg" alt="">
+               <h3 class="my-4">Call us</h3>
+
+               <h5 class="lh-lg fw-normal">+91 63779 82201</h5>
+           </div>
+
+       </div>
+   </div>
+
+</div>

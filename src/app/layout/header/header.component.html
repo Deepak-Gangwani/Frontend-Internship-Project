@@ -1,0 +1,69 @@
+<!-- whatsapp chat icon for contact -->
+<div class="chat-icon">
+  <a href="https://wa.me/7414804515" target="_blank">
+    <img id="sticky_icon" src="https://media.tenor.com/JfBNTAcCpN0AAAAj/ww.gif" alt="WhatsApp Icon">
+  </a>
+</div>
+
+<!-- Navbar html and framework code part -->
+<div class="mx-auto container-fluid sticky-top bg-white py-3 nav-dark border-0 border-bottom" style="z-index: 1;">
+  <nav class="navbar navbar-expand-lg">
+
+    <!-- Navigation toggle using bootstrap and css -->
+    <div class="container">
+
+
+      <div class="me-5"><img src="../../../assets/assets/images/capLogo.svg" alt="" width="200px"></div>
+      <button class="navbar-toggler burger" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+        aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="offcanvas offcanvas-start w-100" tabindex="-1" id="offcanvasNavbar"
+        aria-labelledby="offcanvasNavbarLabel">
+
+        <div class="offcanvas-header border-bottom border-1 image-dark">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel"><img src="../../../assets/assets/images/capLogo.svg"
+              alt=""></h5>
+          <button type="button" class="btn-close burger" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body image-dark">
+          <ul class="d-flex w-100 justify-content-around mt-3 ms-5 dark-text" style="list-style: none;">
+
+            <li class=""><a class="text-decoration-none text-gray-800 hover:text-red-500" [routerLink]="['/home2']" [routerLinkActive]="['active-link']"  target=""
+                rel="noopener noreferrer">Home</a></li>
+            <li class=""><a class=" text-decoration-none text-gray-800 hover:text-red-500 " [routerLink]="['/about']" [routerLinkActive]="['active-link']" 
+                target="" rel="noopener noreferrer">About</a></li>
+            <li class=""><a class=" text-decoration-none text-gray-800 hover:text-red-500" [routerLink]="['/services']" [routerLinkActive]="['active-link']" 
+                target="" rel="noopener noreferrer">Services</a></li>
+            <li class=""><a class=" text-decoration-none text-gray-800 hover:text-red-500" [routerLink]="['/cit']" [routerLinkActive]="['active-link']"  target=""
+                rel="noopener noreferrer">Institute</a></li>
+            <li class=""><a class=" text-decoration-none text-gray-800 hover:text-red-500" [routerLink]="['/career']" [routerLinkActive]="['active-link']" 
+                target="" rel="noopener noreferrer">Career</a></li>
+            <li class=""><a class="  text-decoration-none text-gray-800 hover:text-red-500" [routerLink]="['/blogs']" [routerLinkActive]="['active-link']" 
+                target="" rel="noopener noreferrer">Blogs</a></li>
+            <li class=""><a class=" text-decoration-none text-gray-800 hover:text-red-500" [routerLink]="['/contact']" [routerLinkActive]="['active-link']" 
+                target="" rel="noopener noreferrer">Contact Us</a></li>
+            <li><a class=" text-decoration-none text-red-500 font-semibold" href="mailto:hr@capsitech.com" target=""
+                rel="noopener noreferrer"><i class="fa-solid fa-envelope me-1"></i>hr&#64;capsitech.com</a>
+              <div id="google_translate_element"></div>
+            </li>
+            <li>
+              <button class="text-gray-800 " id="change-theme"><img class="dark-icon"
+                  src="../../../assets/assets/images/moon.png" alt=""></button>
+            </li>
+
+
+          </ul>
+          <!-- data-bs-theme="dark" -->
+          <!-- <div class="form-check form-switch">
+                        <input type="checkbox" class="form-check-input p-2" role="switch"
+                            id="flexSwitchCheckChecked" checked onclick="myFunction()">
+                    </div> -->
+        </div>
+      </div>
+    </div>
+
+
+
+  </nav>
+</div>

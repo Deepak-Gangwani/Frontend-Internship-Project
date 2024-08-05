@@ -1,0 +1,26 @@
+<div class="container mt-4">
+
+
+    <div class="w-75 shadow-lg p-3 mb-5 bg-body-tertiary rounded mx-auto">
+        <h2 class="text-center"> Create author account </h2>
+
+        <div class="col-6 mx-auto">
+
+
+
+            <input [(ngModel)]="author.name" type="text" class="form-control m-1" placeholder="name">
+            <input [(ngModel)]="author.lastname" type="text" class="form-control m-1" placeholder="lastname">
+            <input [(ngModel)]="author.email" type="text" class="form-control m-1" placeholder="email">
+            <input [(ngModel)]="author.password" type="password" class="form-control m-1" placeholder="password">
+            <input type="file" (change)="select($event)" class="form-control m-1" placeholder="image">
+            <textarea [(ngModel)]="author.about" name="" id="" cols="30" rows="4" placeholder="about"
+                class="form-control m-1"></textarea>
+
+            <button (click)="register()" style="background-color: #ff4644;"
+                class="btn px-4 fw-bold py-2 fs-5 rounded text-white">Register</button>
+
+
+        </div>
+    </div>
+
+</div>
